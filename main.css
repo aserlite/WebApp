@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Varela Round', sans-serif;
+}
+
+body {
+    background: #CCCCCC;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover {
+    background: #212121;
+}
+
+.cache {
+    display: none;
+}
+
+.editField {
+    border: none;
+    pointer-events: none;
+}
+
+table {
+    margin: 5rem 0 0 0;
+}
+
+.deleteAcc {
+    text-decoration: none;
+    color:black;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    border: solid 2px black;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px black;
+    background: #EEEEEE;
+}
+
+.PwdContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.eye:hover {
+    cursor: pointer;
+}
+
+i {
+    font-size: 2.5rem;
+}
+
+
+.input {
+    --input-focus: #ccb61f;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+
+.input:focus {
+    border: 2px solid var(--input-focus);
+}
+
+.pwd, .email, .username, .date{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+button, select {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    max-width: 50%;
+    margin: auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+.registerLink a {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: bold;;
+}
+
+.registerLink a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.registerLink a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.chInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.formInfos {
+    max-width: 30vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.profile, .other{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    margin: 5rem auto;
+    border: solid 2px black;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px black;
+    background: #EEEEEE;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+}
+
+.panel form button {
+    width: 15rem;
+}
+
+.panel form {
+    display: flex;
+    align-items: center;
+}
+
+.stroke {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2.5rem auto .5rem auto;
+
+}
+
+.strokeB{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: .5rem auto 2.5rem auto;
+}
+table {
+    width: 90vw;
+    margin: 1rem auto 5rem auto;
+    font-size: 1.25rem;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 16px 24px;
+    text-align: center;
+}
+
+thead tr {
+    background-color: #282828;
+    color: #fff;
+}
+
+thead th {
+    width: 25%;
+    border-right: solid 1px white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+tr:hover {
+    background-color: #ddd !important;
+}
+
+thead tr:hover {
+    background-color: #282828 !important;
+}
+
+td:hover {
+    background-color: #c9c9c9 !important;
+}
+
+.changeOrder {
+    display: flex;
+    width: 50%;
+    margin: auto;
+
+}
+
+option:hover {
+    background-color: yellow;
+}
+
+::selection {
+    background: #212121;
+    color: white;
+}
+
+.iconAdmin{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.iconCalendar:hover{
+    cursor: pointer;
+}
+
+.other p{
+    font-size: 1.5rem;
+}
+
+.backIcon{
+    font-size: 2rem;
+}
+
+.backbtn{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+}
+
+.other div{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.other div:nth-child(odd){
+    background: #dadada;
+}
