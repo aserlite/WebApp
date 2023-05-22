@@ -1,5 +1,5 @@
 <?php
-if ($_COOKIE['token']) {
+if (isset($_COOKIE['token'])) {
     header('Location: profile.php');
 }; ?>
 <!doctype html>
