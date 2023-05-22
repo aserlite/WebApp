@@ -66,7 +66,7 @@ if ($result['admin'] != NULL) {
     } else {
         $order = "id";
     }
-    $sql = "SELECT * FROM user WHERE NOT id = ? ORDER BY ?z";
+    $sql = "SELECT * FROM user WHERE NOT id = ? ORDER BY ?";
     $query = $pdo->prepare($sql);
 
     $query->execute([$result['id'],$order]);
