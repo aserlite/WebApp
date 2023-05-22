@@ -50,7 +50,7 @@ if (isset($_COOKIE['token'])) {
     }
 
     <?php
-    if ($_COOKIE['error']) {
+    if (isset($_COOKIE['error'])) {
         echo 'alert("' . $_COOKIE['error'] . '");';
         setcookie("error", "", time() - 3600);
     }
